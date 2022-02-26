@@ -11,7 +11,7 @@ def index():
     # return "News2 Homepage"
     return render_template("index.html")
 
-@app.route('/sources')
-def sources():
+@app.route('/sources/<name>')
+def sources(name):
     # return "Source News Articles"
     return render_template("sources.html")
