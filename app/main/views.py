@@ -2,7 +2,7 @@ from app import app
 from flask import render_template
 
 @app.route('/')
-def index():
+def homepage():
     print(app.config)
 
     '''
@@ -12,7 +12,7 @@ def index():
     # return "News2 Homepage"
     return render_template("index.html")
 
-@app.route('/sources/<name>')
-def sources(name):
+@app.route('/articles/<name>')
+def articles(name):
     # return "Source News Articles"
-    return render_template("sources.html")
+    return render_template("articles.html")
