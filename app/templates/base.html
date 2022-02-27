@@ -22,7 +22,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand text-dark ml-5" href="/"> <img src="{{ url_for('static', filename='img/paper.jpg')}}" alt="logo" width="70">NEWS</a>        
+        <a class="navbar-brand text-dark text-center" href="/"> <img src="{{ url_for('static', filename='img/paper.jpg')}}" alt="logo" width="70">NEWS</a>        
         
         <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -38,7 +38,7 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div>
         <!-- block content -->
         {% block content %} {% endblock content%}
 
