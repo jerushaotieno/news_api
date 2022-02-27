@@ -3,6 +3,7 @@ from flask import render_template
 
 @app.route('/')
 def index():
+    print(app.config)
 
     '''
     View root page function that returns the index page and its data
