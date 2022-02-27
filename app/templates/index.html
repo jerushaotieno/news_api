@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,4 +11,20 @@
 <body>
     <h3>News Homepage Template</h3>
 </body>
-</html>
+</html> -->
+
+{% extends "base_template.html" %}
+<!-- title -->
+{% block title %} HOME {% endblock %}
+<!-- content -->
+{% block content %}
+<h3>News homepage template using base template</h3>
+
+<!-- loop through items -->
+{% for item in news_sources %}
+<ul>
+    <li>{{item.name}}</li>
+</ul>
+{% endfor %}
+<!--  -->
+{% endblock %} 

@@ -1,16 +1,19 @@
 from app import app
 from flask import render_template
+from requests import sources
+import datetime as dt
 
 @app.route('/')
 def homepage():
-    print(app.config)
+    # print(app.config)
+    news_sources= sources()
 
     '''
     View root page function that returns the index page and its data
     '''
     
     # return "News2 Homepage"
-    return render_template("index.html")
+    return render_template("index.html", news_sources=news_sources)
 
 @app.route('/articles/<name>')
 def articles(name):
