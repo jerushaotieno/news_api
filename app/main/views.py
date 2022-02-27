@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-from requests import sources
+from requests import sources, articles
 import datetime as dt
 
 @app.route('/')
@@ -15,7 +15,8 @@ def homepage():
     # return "News2 Homepage"
     return render_template("index.html", news_sources=news_sources)
 
-@app.route('/articles/<name>')
-def articles(name):
+@app.route('/articles')
+def articles():
     # return "Source News Articles"
-    return render_template("articles.html")
+    source_articles = articles()
+    return render_template("articles.html", source_articles=source_articles)

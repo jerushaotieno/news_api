@@ -7,7 +7,7 @@ class TestSources(unittest.TestCase):
     def setUp(self):
         '''
         '''
-        self.new_source = Sources('Reuters', 'Breaking International News & Views', 'https://www.reuters.com/')
+        self.new_source = Sources('reuters', 'Reuters', 'Breaking International News & Views', 'https://www.reuters.com/')
 
     def test_source(self):
         '''
@@ -19,6 +19,7 @@ class TestSources(unittest.TestCase):
         '''
         test to check on correct news source picked
         '''
+        self.new_source.source_id = 'reuters'
         self.new_source.sourceName = 'Reuters'
         self.new_source.sourceDescription = 'Breaking International News & Views'
         self.new_source.sourceUrl = 'https://www.reuters.com/'
