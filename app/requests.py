@@ -12,7 +12,7 @@ def sources():
     data = newsapi.get_sources(language = 'en', country = 'us')
     data_list = data['sources']
     source_list = []
-     for item in data_list:
+    for item in data_list:
         new_source = Sources(item['name'], item['description'], item['url'])
         source_list.append(new_source)
 
