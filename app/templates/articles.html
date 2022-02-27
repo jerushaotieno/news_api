@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+<!-- title -->
+{% block title %} SOURCES {% endblock %}
+
+<!-- content -->
+{% block content %}
+<h3>Source page using base template</h3>
+<div>
+    {% for item in article_source%}
+    <p>{{item.title}}</p>
+    {% endfor %}
+</div>
+{% endblock %} 
