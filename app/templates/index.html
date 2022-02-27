@@ -19,12 +19,16 @@
 <!-- content -->
 {% block content %}
 <h3>News homepage template using base template</h3>
+<h3>Trending news</h3>
 
 <!-- loop through items -->
 {% for item in news_sources %}
-<ul>
+<!-- <ul>
     <li>{{item.name}}</li>
-</ul>
+</ul> -->
+<div class="row">
+    <h4><a href="/articles/{{item.id}}">{{item.name}}</a></h4>
+</div>
 {% endfor %}
 <!--  -->
 {% endblock %} 
