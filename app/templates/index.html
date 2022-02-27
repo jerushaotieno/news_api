@@ -13,13 +13,18 @@
 </body>
 </html> -->
 
-{% extends "base_template.html" %}
+{% extends "base.html" %}
+
+<!-- style block -->
+{% block styles %} {{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}"> {% endblock %}
+
 <!-- title -->
 {% block title %} HOME {% endblock %}
 <!-- content -->
 {% block content %}
-<h3>News homepage template using base template</h3>
-<h3>Trending news</h3>
+<div class="container">
+    <h3>Trending news</h3>
 
 <!-- loop through items -->
 {% for item in news_sources %}
@@ -27,7 +32,12 @@
     <li>{{item.name}}</li>
 </ul> -->
 <div class="row">
-    <h4><a href="/articles/{{item.id}}">{{item.name}}</a></h4>
+    <!-- loop through items -->
+    {% for item in news_sources%}
+    <div class="row justify-content-center">
+        <a href="/articles/{{item.id}}">{{item.name}}</a>
+    </div>
+    {% endfor %}
 </div>
 {% endfor %}
 <!--  -->
