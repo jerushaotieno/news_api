@@ -1,5 +1,5 @@
 import unittest
-from models import Sources
+from app.models import Sources
 
 class TestSources(unittest.TestCase):
     '''
@@ -22,5 +22,5 @@ class TestSources(unittest.TestCase):
         self.new_source.source_id = 'reuters'
         self.new_source.sourceName = 'Reuters'
         
-if __name__ == '__main__':
-    unittest.main() 
+# if __name__ == '__main__':
+#     unittest.main() 

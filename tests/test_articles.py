@@ -1,5 +1,5 @@
 import unittest
-from models import Articles
+from app.models import Articles
 
 class TestArticles(unittest.TestCase):
     '''
@@ -24,5 +24,5 @@ class TestArticles(unittest.TestCase):
         self.new_article.article_url_to_image = 'https://www.reuters.com/resizer/xVoQlAc2_v4fDEVQSj-QDckqaP0=/960x0/filters:quality(80)/cloudfront-us-east-2.images.arcpublishing.com/reuters/RERKAQVAVBIJRCUE7R33MCP77M.jpg'
         self.new_article.article_published_at = '2022-02-27 4:21 PM GMT+3'
 
-if __name__ == '__main__':
-    unittest.main() 
+# if __name__ == '__main__':
+#     unittest.main() 
