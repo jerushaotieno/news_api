@@ -20,6 +20,20 @@ def sources():
 
     return source_list
 
+def headlines():
+    '''
+    function to get all news sources in English  in a list
+    '''
+    res = newsapi.get_top_headlines(language='en', page_size=1, q='war')
+    res_list =  res['articles']
+    trending = []
+    for item in res_list:
+        top_article = headlines(item['description'], item['urlToImage'], item['url'])
+        trending.append(top_article)
+
+    return trending
+
+
 def articles(source_id):
     '''
     function to get all English news sources in a list

@@ -1,13 +1,11 @@
 class Sources:
     '''
     '''
-    def __init__(self, source_id, source_name, source_description, source_url):
+    def __init__(self, source_id, source_name):
         '''
         '''
         self.source_id = source_id
         self.source_name = source_name
-        self.source_description = source_description
-        self.source_url = source_url
 
 class Articles:
     '''
@@ -21,3 +19,13 @@ class Articles:
         self.article_url = article_url
         self.article_url_to_image = article_url_to_image
         self.article_published_at = article_published_at
+
+class Headlines:
+    '''
+    '''
+    def __init__(self, description, url_to_image, url):
+        '''
+        '''
+        self.description = description
+        self.url_to_image = url_to_image
+        self.url=url
