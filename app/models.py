@@ -23,9 +23,9 @@ class Articles:
 class Headlines:
     '''
     '''
-    def __init__(self, description, url_to_image, url):
+    def __init__(self, article_title, article_url_to_image, article_url):
         '''
         '''
-        self.description = description
-        self.url_to_image = url_to_image
-        self.url=url
+        self.article_title = article_title
+        self.article_url_to_image = article_url_to_image
+        self.article_url = article_url

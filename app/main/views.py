@@ -2,7 +2,6 @@ from app import app
 from flask import render_template
 # from .requests import sources, articles
 from requests import sources, articles, headlines
-import datetime as dt
 
 @app.route('/')
 def homepage():
@@ -14,8 +13,6 @@ def homepage():
     '''
     
     # return "News2 Homepage"
-     trending_article = headlines()
-    print(trending_article)
     return render_template("index.html", news_sources=news_sources, trending_article=trending_article)
 # @app.route('/articles')
 # def articles():
@@ -25,5 +22,4 @@ def homepage():
 @app.route('/articles/<id>')
 def all_articles(id):
     article_source = articles(id)
-    print(article_source)
     return render_template("articles.html", article_source=article_source)
