@@ -1,11 +1,21 @@
-from app import app
-from .models import Sources, Articles
+# from app import app
+from .models import Sources, Articles, Headlines
 import urllib.request, json
 from newsapi import NewsApiClient
 
-key = app.config['API_KEY']
-url = app.config['SOURCE_URL']
-newsapi = NewsApiClient(api_key = key)
+# key = app.config['API_KEY']
+# url = app.config['SOURCE_URL']
+# newsapi = NewsApiClient(api_key = key)
+
+key = None
+url = None
+newsapi = None
+
+def configure_request(app):
+    global key, url, newsapi
+    key = app.config['API_KEY']
+    url = app.config['SOURCE_URL']
+    newsapi = NewsApiClient(api_key=key)
 
 def sources():
     '''
@@ -15,7 +25,7 @@ def sources():
     data_list = data['sources']
     source_list = []
     for item in data_list:
-        new_source = Sources(item['id'], ['name'], item['description'], item['url'])
+        new_source = Sources(item['id'], item['name'])
         source_list.append(new_source)
 
     return source_list
@@ -49,7 +59,6 @@ def articles(source_id):
             source_data_list = response['articles']
             article_results = get_data(source_data_list)
     return article_results
-
 
 def get_data(source_dict):
     '''
