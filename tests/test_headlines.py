@@ -1,7 +1,7 @@
 import unittest
 from app.models import Headlines
 
-class SourcesTest(unittest.TestCase):
+class TestSources(unittest.TestCase):
     '''
     '''
     def setUp(self):

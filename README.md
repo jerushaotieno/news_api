@@ -25,7 +25,7 @@ $ source virtual/bin/activate
 3. The user would want to see the image, description and the time a news article was created.
 4. The user would want to click on an article and read the full article on the source website.
 
-#### **Technologies used**
+#### **Technologies Used**
 1. Flask
 2. HTML5
 3. Bootstrap4
