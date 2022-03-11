@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+
 <!-- title -->
 {% block title %} THE NEWS | Articles {% endblock %}
 
@@ -8,14 +9,14 @@
 
 <div class="container-fluid">
     <div>
-        <a class="text-dark ml-0 mb-4 btn btn-outline-info" href="/">
+        <!-- <a class="text-dark ml-0 mb-4 btn btn-outline-info" href="/"> -->
             HOME
-        </a>
+        <!-- </a> -->
     </div>
 </div>
 
 
-<div class="container"> -->
+<div class="container">
 
 <!-- <h3>Source page using base template</h3> -->
 
@@ -27,7 +28,7 @@
 </div> -->
 
 <div class="container">
-    {% for item in article_source%}
+    {% for item in general %}
 
     <div class="card">
         <div class="row">

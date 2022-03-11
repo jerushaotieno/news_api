@@ -1,11 +1,16 @@
 class Sources:
     '''
     '''
-    def __init__(self, source_id, source_name):
+    def __init__(self, id, name, description, url, category, language, country):
         '''
         '''
-        self.source_id = source_id
-        self.source_name = source_name
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.category = category
+        self.language = language
+        self.country = country
 
 class Articles:
     '''
