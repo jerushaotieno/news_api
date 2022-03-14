@@ -1,16 +1,21 @@
 {% macro displayNews(news_list) %}
 
 <div class="container-fluid">
-    <div class="row">
-        {% for news in news_list %}
-        <div class="col-md-4 card">
-            <div class="thumbnail">
-                <a href="/" target="_blank">{{ news.name}}</a>
-                <p>{{news.description | truncate(100)}}</p>
-                <a href="{{news.url}}" target="_blank"> Read Articles on Site </a>
-            
+    <div class="container-xxl">
+        <div class="row">
+            {% for news in news_list %}
+            <div class="col-md-4">
+                <div class="card" style="background-color: aquamarine; margin: 20px;">
+                    <div class="card-body">
+                        <a href="/" target="_blank">{{ news.name}}</a>
+                        <p>{{news.description | truncate(100)}}</p>
+                        <a href="{{news.url}}" target="_blank" style="border: solid black; background-color: black; color: white; text-align: center; justify-self: center; margin: 5px;"> Read Articles on Site </a>
+                    </div>
+                </div>
             </div>
+            
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
+
 {% endmacro %}

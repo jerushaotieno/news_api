@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=News+Cycle&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap');
 /* styles */
 
-html,
-body {
+* {
     font-family: 'News Cycle', sans-serif;
-    color: red;
+    background-color: blue;
 }
